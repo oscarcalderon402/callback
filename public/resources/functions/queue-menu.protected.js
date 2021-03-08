@@ -356,6 +356,7 @@ exports.handler = async function(context, event, callback) {
         message += 'Press 1 to remain on hold...';
         message += 'Press 2 to request a callback...';
         message += 'Press 3 to leave a voicemail message for the care team...';
+        message += 'Press 4 to talk another agent...';
         message += 'Press the star key to listen to these options again...';
 
         const gather = twiml.gather({
@@ -392,6 +393,12 @@ exports.handler = async function(context, event, callback) {
         //  leave a voicemail
         case '3':
           twiml.redirect(domain + '/inqueue-voicemail?mode=pre-process');
+          callback(null, twiml);
+          break;
+
+               //  leave a voicemail
+        case '4':
+          twiml.redirect("https://taskrouter.twilio.com/v1/Workspaces/WS22d6940179965c41c045fd3fe56a9c48/TaskQueues/WQ894b2af15b0b06e2d2701709617a2871");
           callback(null, twiml);
           break;
 
