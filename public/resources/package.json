@@ -7,12 +7,12 @@
     "start": "twilio-run --env"
   },
   "devDependencies": {
-    "twilio-run": "^2.0.0",
-    "twilio": "^3.54.2",
+    "fs": "0.0.1-security",
     "lodash": "^4.17.11",
-    "xmldom": "^0.1.27",
+    "twilio": "^3.54.2",
+    "twilio-run": "^2.0.0",
     "util": "^0.11.0",
-    "fs": "0.0.1-security"
+    "xmldom": "^0.1.27"
   },
   "engines": {
     "node": "8.10.0"
